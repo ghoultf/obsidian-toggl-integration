@@ -3,7 +3,8 @@ export type tag = string;
 
 export enum QueryType {
 	SUMMARY = 'SUMMARY',
-	LIST = 'LIST'
+	LIST = 'LIST',
+	DETAILED = 'DETAILED'
 }
 
 /**

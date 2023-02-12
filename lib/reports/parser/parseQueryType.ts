@@ -18,12 +18,15 @@ export class QueryTypeParser extends Parser {
 			case Keyword.LIST:
 				query.type = QueryType.LIST;
 				break;
+			case Keyword.DETAILED:
+				query.type = QueryType.DETAILED;
+				break;
 		}
 
 		return [...tokens].slice(1);
 	}
 
 	get _acceptedTokens() {
-		return [Keyword.SUMMARY, Keyword.LIST];
+		return [Keyword.SUMMARY, Keyword.LIST, Keyword.DETAILED];
 	}
 }

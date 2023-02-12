@@ -23,3 +23,15 @@ export interface ProjectSummaryItem {
 	totalTime: string;
 	percent: number;
 }
+
+export interface ReportDetailedItem {
+	name: string;
+	totalTime: string;
+	hex?: string;
+	/** Defines the ordering in the group. (e.g. derive from time) */
+	order?: number;
+	tags?: string[];
+	project?: string;
+	client?: string;
+	startEnd?: string;
+}

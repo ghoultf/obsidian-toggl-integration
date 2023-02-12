@@ -13,6 +13,7 @@
 	import ApiError from './ApiError.svelte';
 	import TogglSummaryReport from './TogglSummaryReport.svelte';
 	import TogglListReport from './TogglListReport.svelte';
+	import TogglDetailedReport from './TogglDetailedReport.svelte';
 	import LoadingAnimation from '../components/LoadingAnimation.svelte';
 	import { Keyword, Token } from 'lib/reports/parser/Parser';
 	import { tokenize } from 'lib/reports/parser/Tokenize';
@@ -51,6 +52,8 @@
 				_reportComponent = TogglSummaryReport;
 			} else if (_query.type === QueryType.LIST) {
 				_reportComponent = TogglListReport;
+			} else if (_query.type === QueryType.DETAILED) {
+				_reportComponent = TogglDetailedReport;
 			}
 		} catch (err) {
 			_parseError = err.message;

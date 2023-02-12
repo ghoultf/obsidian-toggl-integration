@@ -7,6 +7,7 @@ export enum Keyword {
 	// query type keywords
 	SUMMARY = 'SUMMARY',
 	LIST = 'LIST',
+	DETAILED = 'DETAILED',
 
 	// query time interval keywords
 	TODAY = 'TODAY',
